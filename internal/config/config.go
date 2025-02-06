@@ -11,13 +11,13 @@ import (
 //Created for config hold
 //env-default:"production"
 type Config struct{
-	Env string `Yaml:"env" env:"ENV" env-required:"true"`
-	StoragePath string `Yaml:"storage_path" env-required:"true"`
-	HttpServer HTTPServer `Yaml:"http_server"`
+	Env string `yaml:"env" env:"ENV" env-required:"true"`
+	StoragePath string `yaml:"storage_path" env-required:"true"`
+	HttpServer HTTPServer `yaml:"http_server"`
 }
 
 type HTTPServer struct{
-	Address string
+	Address string `yaml:"address" env-required:"true"`
 }
 
 //Execute File
